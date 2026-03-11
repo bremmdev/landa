@@ -27,4 +27,11 @@
 			"remote": true
 		}
 	],
+	"r2_buckets": [
+		{
+			"bucket_name": "landa",
+			"binding": "storage",
+			"remote": true
+		}
+	],
 }
