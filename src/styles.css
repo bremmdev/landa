@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+body {
+    position: relative;
+    background-image: url('/yarn.svg');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: white;
+}

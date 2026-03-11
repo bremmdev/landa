@@ -1,0 +1,33 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="220"
+  height="160"
+  viewBox="0 0 220 160"
+  fill="none"
+>
+  <defs>
+    <g
+      id="yarn-ball"
+      fill="none"
+      stroke="oklch(71.1% 0.019 323.02)"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <g transform="rotate(-14)">
+        <circle cx="0" cy="0" r="24" stroke-width="4" />
+        <path d="M-20 -16C-11 -8-5 3 5 18" stroke-width="4" />
+        <path d="M-10 -23C0 -12 9 2 15 22" stroke-width="4" />
+        <path d="M-24 -3C-11 7 5 12 24 8" stroke-width="4" />
+        <path d="M-22 8C-8 15 7 16 20 9" stroke-width="4" />
+        <path d="M-19 18C-7 14 4 7 16 -4" stroke-width="4" />
+        <path d="M-17 -11C-4 -17 11 -15 22 -7" stroke-width="4" />
+        <path d="M-7 -24C-15 -18-21 -10-24 1" stroke-width="4" />
+        <path d="M-23 4C-12 -2 1 -11 16 -18" stroke-width="4" />
+        <path d="M22 10C33 15 44 14 56 14C65 14 73 18 80 23" stroke-width="4" />
+      </g>
+    </g>
+  </defs>
+
+  <use href="#yarn-ball" transform="translate(52 44)" opacity=".05" />
+  <use href="#yarn-ball" transform="translate(146 112) scale(.88)" opacity=".12" />
+</svg>

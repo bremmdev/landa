@@ -35,7 +35,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="bg-mauve-200">
-        <main className="mx-auto max-w-360 w-11/12">{children}</main>
+        <main className="mx-auto max-w-360 w-11/12 py-8">{children}</main>
         <TanStackDevtools
           config={{
             position: 'bottom-right',
