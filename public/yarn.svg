@@ -28,6 +28,6 @@
     </g>
   </defs>
 
-  <use href="#yarn-ball" transform="translate(52 44)" opacity=".05" />
-  <use href="#yarn-ball" transform="translate(146 112) scale(.88)" opacity=".12" />
+  <use href="#yarn-ball" transform="translate(52 44)" opacity=".02" />
+  <use href="#yarn-ball" transform="translate(146 112) scale(.88)" opacity=".08" />
 </svg>

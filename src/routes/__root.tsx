@@ -34,7 +34,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="bg-mauve-200">
+      <body className='text-theme'>
         <main className="mx-auto max-w-360 w-11/12 py-8">{children}</main>
         <TanStackDevtools
           config={{

@@ -3,6 +3,7 @@ import { useLoaderData } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { env } from "cloudflare:workers"
 import type { Project } from '../../lib/types/types'
+import TitleHeader from '../components/TitleHeader'
 
 const getProject = createServerFn()
   .inputValidator((slug: string) => slug)
@@ -29,15 +30,19 @@ function RouteComponent() {
   const { project } = useLoaderData({ from: Route.id });
 
   return <section aria-label={project.name}>
-    <div>
-      <h1 className="text-2xl font-mediun uppercase text-mauve-950">{project.name}</h1>
-    </div>
-    <div className="flex flex-col lg:flex-row gap-4">
-      <img src={project.imageUrl} alt={project.name} className="rounded-lg object-cover w-full lg:w-1/2" />
+    <div className="flex flex-col lg:flex-row gap-8">
       <div className="flex flex-col gap-4 lg:w-1/2">
-        <span>Start datum: {project.startDate}</span>
-        <span>Eind datum: {project.endDate ?? "nog niet klaar"}</span>
-        <span>Garen: {project.yarn}</span>
+        <TitleHeader name={project.name} owner={project.owner} />
+        <img src={project.imageUrl} alt={project.name} className="rounded-lg object-cover w-full max-lg:max-h-[70vh]" />
+      </div>
+
+      <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-4 lg:pt-20 items-start self-start">
+        <span className="font-medium">Start datum</span><span>{project.startDate}</span>
+        <span className="font-medium">Eind datum</span><span>{project.endDate ?? "nog niet klaar"}</span>
+        <span className="font-medium">Naaldgrootte</span><span>{project.needleSize ? project.needleSize : "onbekend"}</span>
+        <span className="font-medium">Garen</span><span>{project.yarn}</span>
+        <span className="font-medium">Steekverhouding</span><span>{project.castOn ? project.castOn : "onbekend"}</span>
+        <span className="font-medium">Ontwerpster</span><span>{project.designer ? project.designer : "Eigen ontwerp"}</span>
       </div>
     </div>
   </section>
