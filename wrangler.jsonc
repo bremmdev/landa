@@ -4,14 +4,13 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "landa",
-	"compatibility_date": "2025-09-02",
+	"compatibility_date": "2026-03-13",
 	"compatibility_flags": [
-		"nodejs_compat"
+		"global_fetch_strictly_public"
 	],
-	"main": "@tanstack/react-start/server-entry",
+	"main": "@astrojs/cloudflare/entrypoints/server",
 	"observability": {
-		"enabled": true
+		"enabled": true,
 	},
 	"routes": [
 		{
@@ -19,19 +18,8 @@
 			"custom_domain": true,
 		},
 	],
-	"d1_databases": [
-		{
-			"binding": "db",
-			"database_name": "landa",
-			"database_id": "e279a47b-2f1c-45e3-b6da-766825f38367",
-			"remote": true
-		}
-	],
-	"r2_buckets": [
-		{
-			"bucket_name": "landa",
-			"binding": "storage",
-			"remote": true
-		}
-	],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS",
+	},
 }

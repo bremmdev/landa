@@ -54,5 +54,19 @@
     "needleSize": "5",
     "designer": null,
     "castOn": null
+  },
+  {
+    "id": 5,
+    "name": "Grijze Sok",
+    "slug": "grijze-sok",
+    "owner": "Matthijs",
+    "category": "Sokken",
+    "startDate": "",
+    "endDate": "",
+    "yarn": "LANG Yarns Jawoll",
+    "imageUrl": "https://landastorage.bremmdev.me/grijze-sok.webp",
+    "needleSize": "2.5",
+    "designer": "Mirjam Molenbeek",
+    "castOn": 72
   }
 ]
