@@ -1,0 +1,35 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import TitleHeader from "../components/TitleHeader.astro";
+import { getCollection } from "astro:content";
+
+const projectCollection = await getCollection("projects");
+const projects = projectCollection
+  .map((project) => project.data)
+  .sort(
+    (a, b) =>
+      new Date(b.startDate ?? "").getTime() -
+      new Date(a.startDate ?? "").getTime(),
+  );
+---
+
+<MainLayout title="Landa">
+  <div class="container mx-auto px-4 py-8">
+    <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {
+        projects.map((project) => (
+          <li class="flex flex-col gap-4">
+            <TitleHeader name={project.name} owner={project.owner} />
+            <a href={`/projects/${project.slug}`} class="flex flex-col gap-4">
+              <img
+                src={project.imageUrl}
+                alt={project.name}
+                class="rounded-lg object-cover h-96 w-full"
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</MainLayout>

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: var(--font-poppins);
+    --color-theme: oklch(0.3089 0.1297 345.98);
+}
+
+body {
+    position: relative;
+    background-image: url('/yarn.svg');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: white;
+}

@@ -1,0 +1,52 @@
+---
+import MainLayout from "../../layout/MainLayout.astro";
+import TitleHeader from "../../components/TitleHeader.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const project = entry.data;
+---
+
+<MainLayout title={project?.name}>
+  <section aria-label={project?.name}>
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="flex flex-col gap-4 lg:w-1/2">
+        <TitleHeader name={project?.name} owner={project?.owner} />
+        <img
+          src={project?.imageUrl}
+          alt={project?.name}
+          class="rounded-lg object-cover w-full max-lg:max-h-[70vh]"
+        />
+      </div>
+
+      <div
+        class="grid grid-cols-[auto_1fr] gap-x-4 gap-4 lg:pt-20 items-start self-start"
+      >
+        <span class="font-medium">Start datum</span><span
+          >{project?.startDate}</span
+        >
+        <span class="font-medium">Eind datum</span><span
+          >{project?.endDate ?? "nog niet klaar"}</span
+        >
+        <span class="font-medium">Naaldgrootte</span><span
+          >{project?.needleSize ? project?.needleSize : "onbekend"}</span
+        >
+        <span class="font-medium">Garen</span><span>{project?.yarn}</span>
+        <span class="font-medium">Steekverhouding</span><span
+          >{project?.castOn ? project?.castOn : "onbekend"}</span
+        >
+        <span class="font-medium">Ontwerpster</span><span
+          >{project?.designer ? project?.designer : "Eigen ontwerp"}</span
+        >
+      </div>
+    </div>
+  </section>
+</MainLayout>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Happy Sok",
+    "slug": "happy-sok",
+    "owner": "Jolanda",
+    "category": "Sokken",
+    "startDate": "2026-02-05",
+    "endDate": "2026-02-17",
+    "yarn": "Drops Fiesta",
+    "imageUrl": "https://landastorage.bremmdev.me/happy-sok.webp",
+    "needleSize": "3.5",
+    "designer": "Mirjam Molenbeek",
+    "castOn": 48
+  },
+  {
+    "id": 2,
+    "name": "Vruchtenhagelsok",
+    "slug": "vruchtenhagelsok",
+    "owner": "Jolanda",
+    "category": "Sokken",
+    "startDate": "2026-02-17",
+    "endDate": "2026-02-28",
+    "yarn": "Drops Fiesta",
+    "imageUrl": "https://landastorage.bremmdev.me/vruchtenhagelsok.webp",
+    "needleSize": "3.5",
+    "designer": "Mirjam Molenbeek",
+    "castOn": 48
+  },
+  {
+    "id": 3,
+    "name": "Kleine schaapjesdeken",
+    "slug": "kleine-schaapjesdeken",
+    "owner": "Katten",
+    "category": "Deken",
+    "startDate": "2025-11-08",
+    "endDate": "2026-02-17",
+    "yarn": "Drops Alaska",
+    "imageUrl": "https://landastorage.bremmdev.me/Kleine-schaapjedeken.webp",
+    "needleSize": "5",
+    "designer": null,
+    "castOn": 90
+  },
+  {
+    "id": 4,
+    "name": "Koazy memory deken",
+    "slug": "koazy-memory-deken",
+    "owner": "Jolanda",
+    "category": "Deken",
+    "startDate": "2025-12-20",
+    "endDate": "2026-02-14",
+    "yarn": "Drops Paris",
+    "imageUrl": "https://landastorage.bremmdev.me/koazy-memory-deken.webp",
+    "needleSize": "5",
+    "designer": null,
+    "castOn": null
+  }
+]

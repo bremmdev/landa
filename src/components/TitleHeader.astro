@@ -1,0 +1,14 @@
+---
+const { name, owner } = Astro.props;
+---
+
+<span class="flex justify-between items-center gap-4 text-xl lg:text-2xl py-2">
+  <h2 class="font-regular uppercase">{name}</h2>
+  {
+    owner && (
+      <span class="uppercase w-10 h-10 flex items-center justify-center rounded-full bg-theme/10">
+        {owner.charAt(0).toUpperCase()}
+      </span>
+    )
+  }
+</span>
