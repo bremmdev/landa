@@ -2,6 +2,7 @@
 import MainLayout from "../../layout/MainLayout.astro";
 import TitleHeader from "../../components/TitleHeader.astro";
 import { getCollection } from "astro:content";
+import { formatDate } from "../../utils";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -30,13 +31,15 @@ const project = entry.data;
       <div
         class="grid grid-cols-[auto_1fr] gap-x-4 gap-4 lg:pt-20 items-start self-start"
       >
-        <span class="font-medium">Start datum</span><span
-          >{project?.startDate}</span
+        <span class="font-medium">Startdatum</span><span
+          >{
+            project.startDate ? formatDate(project.startDate) : "onbekend"
+          }</span
         >
-        <span class="font-medium">Eind datum</span><span
-          >{project?.endDate ?? "nog niet klaar"}</span
+        <span class="font-medium">Einddatum</span><span
+          >{project.endDate ? formatDate(project.endDate) : "onbekend"}</span
         >
-        <span class="font-medium">Naaldgrootte</span><span
+        <span class="font-medium">Naalddikte</span><span
           >{project?.needleSize ? project?.needleSize : "onbekend"}</span
         >
         <span class="font-medium">Garen</span><span>{project?.yarn}</span>
