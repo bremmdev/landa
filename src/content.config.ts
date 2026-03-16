@@ -3,7 +3,7 @@ import { file } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const projects = defineCollection({
-    loader: file('./src/content/projects.json'),
+    loader: file('./src/content/projects.csv'),
     schema: z.object({
         id: z.number().int(),
         name: z.string(),
