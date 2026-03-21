@@ -6,7 +6,7 @@
   startDate: "2026-02-05"
   endDate: "2026-02-17"
   yarn: Drops Fiesta
-  imageUrl: src/content/images/happy-sok.webp
+  image: ./images/happy-sok.webp
   needleSize: "3.5"
   designer: Mirjam Molenbeek
   castOn: 48
@@ -19,7 +19,7 @@
   startDate: "2026-02-17"
   endDate: "2026-02-28"
   yarn: Drops Fiesta
-  imageUrl: src/content/images/vruchtenhagelsok.webp
+  image: ./images/vruchtenhagelsok.webp
   needleSize: "3.5"
   designer: Mirjam Molenbeek
   castOn: 48
@@ -32,7 +32,7 @@
   startDate: "2025-11-08"
   endDate: "2026-02-17"
   yarn: Drops Alaska
-  imageUrl: src/content/images/kleine-schaapjesdeken.webp
+  image: ./images/kleine-schaapjesdeken.webp
   needleSize: "5"
   designer: null
   castOn: 90
@@ -45,7 +45,7 @@
   startDate: "2025-12-20"
   endDate: "2026-02-14"
   yarn: Drops Paris
-  imageUrl: src/content/images/koazy-memory-deken.webp
+  image: ./images/koazy-memory-deken.webp
   needleSize: "5"
   designer: null
   castOn: null
@@ -58,7 +58,7 @@
   startDate: "2025-09-20"
   endDate: "2026-02-20"
   yarn: LANG Yarns Jawoll
-  imageUrl: src/content/images/grijze-sok.webp
+  image: ./images/grijze-sok.webp
   needleSize: "2.5"
   designer: Mirjam Molenbeek
   castOn: 72

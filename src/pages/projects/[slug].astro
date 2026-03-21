@@ -21,11 +21,15 @@ const project = entry.data;
     <div class="flex flex-col lg:flex-row gap-8">
       <div class="flex flex-col gap-4 lg:w-1/2">
         <TitleHeader name={project?.name} owner={project?.owner} />
-        <img
-          src={project?.imageUrl}
-          alt={project?.name}
-          class="rounded-lg object-cover w-full max-lg:max-h-[70vh]"
-        />
+        {
+          project?.image && (
+            <img
+              src={project.image.src}
+              alt={project?.name ?? ""}
+              class="rounded-lg object-cover w-full max-lg:max-h-[70vh]"
+            />
+          )
+        }
       </div>
 
       <div

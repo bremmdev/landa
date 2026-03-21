@@ -4,7 +4,7 @@ import { z } from 'astro/zod';
 
 const projects = defineCollection({
     loader: file('./src/content/projects.yml'),
-    schema: z.object({
+    schema: ({ image }) => z.object({
         id: z.number().int(),
         name: z.string(),
         slug: z.string(),
@@ -15,7 +15,7 @@ const projects = defineCollection({
         needleSize: z.string().optional().nullable(),
         yarn: z.string().optional().nullable(),
         designer: z.string().optional().nullable(),
-        imageUrl: z.string().optional().nullable(),
+        image: image().optional().nullable(),
         castOn: z.number().int().optional().nullable(),
     }),
 });

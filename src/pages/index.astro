@@ -21,11 +21,13 @@ const projects = projectCollection
           <li class="flex flex-col gap-4">
             <TitleHeader name={project.name} owner={project.owner} />
             <a href={`/projects/${project.slug}`} class="flex flex-col gap-4">
-              <img
-                src={project.imageUrl}
-                alt={project.name}
-                class="rounded-lg object-cover h-96 w-full"
-              />
+              {project.image && (
+                <img
+                  src={project.image.src}
+                  alt={project.name ?? ""}
+                  class="rounded-lg object-cover h-96 w-full"
+                />
+              )}
             </a>
           </li>
         ))
